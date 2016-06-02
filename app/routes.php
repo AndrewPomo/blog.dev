@@ -10,6 +10,7 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('/', 'HomeController@showWelcome');
 
 Route::get('/resume', 'HomeController@resume');
 
@@ -23,3 +24,5 @@ Format for default variable is function($name = default variable)
 Route::get('/sayhello/{name}', 'HomeController@sayHello');
 
 Route::get('/rolldice/{guess?}', 'HomeController@rollDice');
+
+Route::resource('posts', 'PostsController');
