@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title-tag')
+    {{{$post->title}}}
+@stop
+
 @section('content')
 <div class="container">
     <h1> {{{$post->title}}} </h1>

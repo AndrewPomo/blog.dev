@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title-tag')
+    Resume
+@stop
+
 @section('top-links')
     <link href="/css/main.css" rel="stylesheet">
 @stop

@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title-tag')
+    Simple Simon Game
+@stop
+
 @section('top-links')
 	<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>

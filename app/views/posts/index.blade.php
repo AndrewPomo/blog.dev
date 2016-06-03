@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title-tag')
+    Blog Posts
+@stop
+
 @section('content')
 <div class="container">
     @foreach($posts as $post)
