@@ -12,5 +12,6 @@
 	    <p>Tags: {{{$post->categories}}} </p>
 	    <p> {{{$post->body}}} </p>
 	@endforeach
+	{{ $posts->links() }}
 </div>
 @stop

@@ -11,35 +11,35 @@
 @section('content')
 
 <div class="container">
-	<h1 class="createHead">Create A New Post!</h1>
-	{{ Form::open(array('action' => 'PostsController@store')) }}
+	<h1 class="editHead">Edit This Post!</h1>
+	{{ Form::open(['action' => ['PostsController@update', $post->id], 'method'=>'PUT']) }}
 	@if ($errors->has('title'))
 	 <div class="alert alert-danger">{{ $errors->first('title', '<span class="help-block">:message</span>') }}</div>
 	@endif
 		<fieldset class="form-group">
 			{{ Form::label('title', 'Title') }}
-			{{ Form::text('title', Input::old('title'), ['class' => 'form-control', 'placeholder' => 'A Title For Your Post']) }}
+			{{ Form::text('title', $post->title, ['class' => 'form-control', 'placeholder' => 'A Title For Your Post']) }}
 		</fieldset>
 	@if ($errors->has('author'))
 	 <div class="alert alert-danger">{{ $errors->first('author', '<span class="help-block">:message</span>') }}</div>
 	@endif
 		<fieldset class="form-group">
 			{{ Form::label('author', 'Author') }}
-			{{ Form::text('author', Input::old('author'), ['class' => 'form-control', 'placeholder' => 'Enter Your Name']) }}
+			{{ Form::text('author', $post->author, ['class' => 'form-control', 'placeholder' => 'Enter Your Name']) }}
 		</fieldset>
 	@if ($errors->has('categories'))
 	 <div class="alert alert-danger">{{ $errors->first('categories', '<span class="help-block">:message</span>') }}</div>
 	@endif
 		<fieldset class="form-group">
 			{{ Form::label('categories', 'Categories') }}
-			{{ Form::text('categories', Input::old('categories'), ['class' => 'form-control', 'placeholder' => 'Enter Some Categories For Your Post']) }}
+			{{ Form::text('categories', $post->categories, ['class' => 'form-control', 'placeholder' => 'Enter Some Categories For Your Post']) }}
 		</fieldset>
 	@if ($errors->has('body'))
 	 <div class="alert alert-danger">{{ $errors->first('body', '<span class="help-block">:message</span>') }}</div>
 	@endif
 		<fieldset class="form-group">
 			{{ Form::label('body', 'Body') }}
-			{{ Form::text('body', Input::old('body'), ['class' => 'form-control', 'placeholder' => 'Write Your Post Here']) }}
+			{{ Form::textarea('body', $post->body, ['class' => 'form-control', 'placeholder' => 'Write Your Post Here']) }}
 		</fieldset>
 		<button type="submit" class="btn btn-success">Publish</button>
 	{{ Form::close() }}

@@ -6,7 +6,7 @@ class Post extends Eloquent {
 
 	public static $rules = [
 		'title'      => 'required|max:100',
-    	'body'       => 'required|max:10000',
+    	'body'       => 'required|max:1000000',
     	'author'	 => 'required|max:100',
     	'categories' => 'required|max:100'
 	];

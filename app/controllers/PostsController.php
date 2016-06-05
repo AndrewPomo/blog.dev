@@ -9,7 +9,7 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::all();
+		$posts = Post::paginate(5);
 		return View::make('posts.index')->with('posts', $posts);
 	}
 
@@ -46,15 +46,8 @@ class PostsController extends \BaseController {
 			$newPost->categories = Input::get('categories');
 			$newPost->body  = Input::get('body');
 			$newPost->save();
-
-			if ($newPost->save()) {
-				return Redirect::action('PostsController@index');
-			} else {
-				return Redirect::back()->withInput();
-			}
-	    }	
-
-
+			return View::make("posts.show")->with('post', $newPost);
+		}
 	}
 
 
@@ -79,7 +72,8 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return "edit $id";
+        $post = Post::find($id);
+        return View::make('posts.edit')->with(['post' => $post]);
 	}
 
 
@@ -91,7 +85,22 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		return "update $id";
+		$validator = Validator::make(Input::all(), Post::$rules);
+
+	    // attempt validation
+	    if ($validator->fails()) {
+	        // validation failed, redirect to the post create page with validation errors and old inputs
+	        return Redirect::back()->withInput()->withErrors($validator);
+	    } else {
+	        // validation succeeded, create and save the post
+			$editPost = Post::find($id);
+			$editPost->title = Input::get('title');
+			$editPost->author = Input::get('author');
+			$editPost->categories = Input::get('categories');
+			$editPost->body  = Input::get('body');
+			$editPost->save();
+			return View::make("posts.show")->with('post', $editPost);
+	    }
 	}
 
 
