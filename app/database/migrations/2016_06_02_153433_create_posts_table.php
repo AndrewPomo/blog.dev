@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration {
 			$table->string('title');
 			$table->text('body');
 			$table->text('categories');
+			$table->string('image', 200);
 			$table->text('author');
 			$table->timestamps();
 		});

@@ -2,3 +2,53 @@ body {
     background-image: url(/img/ignasi_pattern_s.png);
     font-family: Open Sans;
 }
+
+.navbar {
+	height: 85px;
+	padding:10px 20px 10px 20px;
+	background-color: white;
+	color: black;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #000000;
+}
+
+.navbar-header {
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.navbar-nav {
+	font-size: 1em;
+	font-weight: 600;
+	padding: 22px 20px 20px 36px;
+}
+
+.navbar-form {
+	margin:0px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+
+.navbar-nav>li>a {
+	padding:0px;
+	margin:0px 16px 0px 16px;
+}
+
+#blog-hero {
+	margin-top: -20px;
+	background-image: url('/img/better-wood.jpg');
+}
+
+#blog-jumbo {
+	color: white;
+	font-weight: 800;
+	margin-top: 15px;
+	background-color: transparent;
+}
+
+#dancing-script {
+	font-family: Dancing Script;
+	font-size: 1.2em;
+}

@@ -12,7 +12,7 @@
 
 <div class="container">
 	<h1 class="editHead">Edit This Post!</h1>
-	{{ Form::open(['action' => ['PostsController@update', $post->id], 'method'=>'PUT']) }}
+	{{ Form::open(['action' => ['PostsController@update', $post->id], 'method'=>'PUT', 'files' => true]) }}
 	@if ($errors->has('title'))
 	 <div class="alert alert-danger">{{ $errors->first('title', '<span class="help-block">:message</span>') }}</div>
 	@endif
@@ -33,6 +33,13 @@
 		<fieldset class="form-group">
 			{{ Form::label('categories', 'Categories') }}
 			{{ Form::text('categories', $post->categories, ['class' => 'form-control', 'placeholder' => 'Enter Some Categories For Your Post']) }}
+		</fieldset>
+	@if ($errors->has('image'))
+	 <div class="alert alert-danger">{{ $errors->first('image', '<span class="help-block">:message</span>') }}</div>
+	@endif
+		<fieldset class="form-group">
+			{{ Form::label('image', 'Upload Your Post\'s Featured Image') }}
+			{{ Form::file('image', $post->image, ['class' => 'form-control']) }}
 		</fieldset>
 	@if ($errors->has('body'))
 	 <div class="alert alert-danger">{{ $errors->first('body', '<span class="help-block">:message</span>') }}</div>

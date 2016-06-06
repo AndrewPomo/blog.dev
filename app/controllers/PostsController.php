@@ -44,6 +44,13 @@ class PostsController extends \BaseController {
 			$newPost->title = Input::get('title');
 			$newPost->author = Input::get('author');
 			$newPost->categories = Input::get('categories');
+			if (Input::hasFile('image')) {
+				$imagePath = 'img/postImg/';
+				$imageExtension = Input::file('image')->getClientOriginalExtension();
+				$imageName = uniqid() . '.' . $imageExtension;
+				Input::file('image')->move($imagePath, $imageName);
+				$newPost->image = 'img/postImg/' . $imageName;
+			}
 			$newPost->body  = Input::get('body');
 			$newPost->save();
 			return View::make("posts.show")->with('post', $newPost);
@@ -97,6 +104,13 @@ class PostsController extends \BaseController {
 			$editPost->title = Input::get('title');
 			$editPost->author = Input::get('author');
 			$editPost->categories = Input::get('categories');
+			if (Input::hasFile('image')) {
+				$imagePath = 'img/postImg/';
+				$imageExtension = Input::file('image')->getClientOriginalExtension();
+				$imageName = uniqid() . '.' . $imageExtension;
+				Input::file('image')->move($imagePath, $imageName);
+				$editPost->image = 'img/postImg/' . $imageName;
+			}
 			$editPost->body  = Input::get('body');
 			$editPost->save();
 			return View::make("posts.show")->with('post', $editPost);
