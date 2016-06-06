@@ -12,6 +12,7 @@ body {
 
 .navbar-default .navbar-nav>li>a {
 	color: #000000;
+	margin:0px 10px 0px 10px;
 }
 
 .navbar-header {
@@ -19,16 +20,25 @@ body {
 	padding-bottom:6px;
 }
 
+.navbar-brand {
+	padding:15px 5px 15px 5px;
+}
+
 .navbar-nav {
 	font-size: 1em;
 	font-weight: 600;
-	padding: 22px 20px 20px 36px;
+	padding: 22px 20px 20px 20px;
+	margin-top: 0px;
 }
 
 .navbar-form {
 	margin:0px;
 	padding-top: 14px;
 	padding-bottom: 14px;
+}
+
+.navbar-collapse {
+	background-color: white;
 }
 
 .navbar-nav>li>a {
@@ -38,17 +48,50 @@ body {
 
 #blog-hero {
 	margin-top: -20px;
+	height:500px;
 	background-image: url('/img/better-wood.jpg');
+}
+
+#post-hero {
+	margin-top: -20px;
+	height:500px;
 }
 
 #blog-jumbo {
 	color: white;
 	font-weight: 800;
 	margin-top: 15px;
+	
 	background-color: transparent;
 }
 
-#dancing-script {
-	font-family: Dancing Script;
-	font-size: 1.2em;
+#post-holder {
+	background-color: white;
+	margin-top: -120px;
+}
+
+.post-date {
+	font-size: 10px;
+}
+
+.pre-head {
+	font-weight: 700;
+}
+
+.pre-post {
+	margin-top:15px;
+	margin-bottom:35px;
+}
+
+.pre-image {
+	max-height: 300px
+}
+
+#roboto-slab {
+	font-family: Roboto Slab;
+	font-weight: 700;
+}
+
+#roboto-slab-small {
+	font-family: Roboto Slab;
 }

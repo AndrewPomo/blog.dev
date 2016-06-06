@@ -41,6 +41,13 @@
 			{{ Form::label('image', 'Upload Your Post\'s Featured Image') }}
 			{{ Form::file('image', $post->image, ['class' => 'form-control']) }}
 		</fieldset>
+	@if ($errors->has('summary'))
+	 <div class="alert alert-danger">{{ $errors->first('summary', '<span class="help-block">:message</span>') }}</div>
+	@endif
+		<fieldset class="form-group">
+			{{ Form::label('summary', 'Summary') }}
+			{{ Form::text('summary', $post->summary, ['class' => 'form-control', 'placeholder' => 'Enter A Short Summary Of Your Post']) }}
+		</fieldset>
 	@if ($errors->has('body'))
 	 <div class="alert alert-danger">{{ $errors->first('body', '<span class="help-block">:message</span>') }}</div>
 	@endif

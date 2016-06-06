@@ -1,6 +1,6 @@
 <?php 
 
-class Post extends Eloquent {
+class Post extends BaseModel {
 
 	protected $table = "posts";
 
@@ -8,7 +8,9 @@ class Post extends Eloquent {
 		'title'      => 'required|max:100',
     	'body'       => 'required|max:1000000',
     	'author'	 => 'required|max:100',
-    	'categories' => 'required|max:100'
+    	'categories' => 'required|max:100',
+    	'summary'    => 'required|max:200',
+    	'image'      => 'required|max:200'
 	];
 }
 

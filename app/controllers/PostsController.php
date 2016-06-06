@@ -37,6 +37,7 @@ class PostsController extends \BaseController {
 	    // attempt validation
 	    if ($validator->fails()) {
 	        // validation failed, redirect to the post create page with validation errors and old inputs
+	        Session::flash('errorMessage', 'Post was not saved');
 	        return Redirect::back()->withInput()->withErrors($validator);
 	    } else {
 	        // validation succeeded, create and save the post
@@ -44,6 +45,8 @@ class PostsController extends \BaseController {
 			$newPost->title = Input::get('title');
 			$newPost->author = Input::get('author');
 			$newPost->categories = Input::get('categories');
+			$newPost->user_id = Auth::id();
+			$newPost->summary = Input::get('summary');
 			if (Input::hasFile('image')) {
 				$imagePath = 'img/postImg/';
 				$imageExtension = Input::file('image')->getClientOriginalExtension();
@@ -53,6 +56,8 @@ class PostsController extends \BaseController {
 			}
 			$newPost->body  = Input::get('body');
 			$newPost->save();
+			Session::flash('successMessage', 'Post has been saved');
+			Log::info("New Post Created: id= $newPost->id, title= $newPost->title, author= $newPost->author, categories= $newPost->categories");
 			return View::make("posts.show")->with('post', $newPost);
 		}
 	}
@@ -97,6 +102,7 @@ class PostsController extends \BaseController {
 	    // attempt validation
 	    if ($validator->fails()) {
 	        // validation failed, redirect to the post create page with validation errors and old inputs
+	        Session::flash('errorMessage', 'Post was not updated');
 	        return Redirect::back()->withInput()->withErrors($validator);
 	    } else {
 	        // validation succeeded, create and save the post
@@ -104,6 +110,7 @@ class PostsController extends \BaseController {
 			$editPost->title = Input::get('title');
 			$editPost->author = Input::get('author');
 			$editPost->categories = Input::get('categories');
+			$editPost->summary = Input::get('summary');
 			if (Input::hasFile('image')) {
 				$imagePath = 'img/postImg/';
 				$imageExtension = Input::file('image')->getClientOriginalExtension();
@@ -113,6 +120,7 @@ class PostsController extends \BaseController {
 			}
 			$editPost->body  = Input::get('body');
 			$editPost->save();
+			Session::flash('successMessage', 'Post has been updated');
 			return View::make("posts.show")->with('post', $editPost);
 	    }
 	}
@@ -126,7 +134,10 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		return "destroy $id";
+		$deadPost = Post::find($id);
+		$deadPost->delete();
+		Session::flash('successMessage', 'Post successfully deleted!');
+		return View::make("posts.show")->with('post', $deadPost);
 	}
 
 

@@ -16,10 +16,13 @@ class CreatePostsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('title');
+			$table->string('summary', 200);
 			$table->text('body');
 			$table->text('categories');
 			$table->string('image', 200);
 			$table->text('author');
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
 			$table->timestamps();
 		});
 	}
