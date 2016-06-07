@@ -21,7 +21,7 @@ body {
 }
 
 .navbar-brand {
-	padding:15px 5px 15px 5px;
+	padding:0px 0px 0px 0px;
 }
 
 .navbar-nav {
@@ -37,6 +37,10 @@ body {
 	padding-bottom: 14px;
 }
 
+.nav-menu {
+	margin-top:15px;
+}
+
 .navbar-collapse {
 	background-color: white;
 }
@@ -48,13 +52,13 @@ body {
 
 #blog-hero {
 	margin-top: -20px;
-	height:500px;
+	height:350px;
 	background-image: url('/img/better-wood.jpg');
 }
 
 #post-hero {
 	margin-top: -20px;
-	height:500px;
+	height:350px;
 }
 
 #blog-jumbo {
@@ -65,9 +69,12 @@ body {
 	background-color: transparent;
 }
 
-#post-holder {
+#post-holder{
 	background-color: white;
-	margin-top: -120px;
+}
+
+#post-holder.col-xs-12 {
+	margin-top: -200px;
 }
 
 .post-date {
@@ -94,4 +101,15 @@ body {
 
 #roboto-slab-small {
 	font-family: Roboto Slab;
+}
+
+#signup-modal-button{
+	background-color: rgb(19,56,132);
+	color:white;
+}
+
+@media screen and (min-width: 768px) {
+	#post-holder.col-md-10 {
+		margin-top: -140px;
+	}
 }

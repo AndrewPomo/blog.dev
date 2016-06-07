@@ -5,6 +5,7 @@
 @stop
 
 @section('top-links')
+	
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
 @stop
 
@@ -17,7 +18,7 @@
 	</div>
 </div>
 <div class="container">
-	<div id="post-holder" class="container col-xs-10 col-xs-offset-1">
+	<div id="post-holder" class="container col-md-10 col-xs-12 col-md-offset-1">
 	    @foreach($posts as $post)
 	    	<div class="row pre-post">
 		    	<img class="col-xs-6 pre-image" src="/{{$post->image}}">

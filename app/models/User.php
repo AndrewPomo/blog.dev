@@ -16,6 +16,12 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+	public static $rules = [
+		'name'      => 'required|max:100',
+    	'email'       => 'required|max:100',
+    	'password'	 => 'required|max:100'
+	];
+
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
@@ -28,6 +34,6 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	    return $this->hasMany('Post');
 	}
 
-	
+
 
 }

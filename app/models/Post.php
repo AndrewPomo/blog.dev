@@ -12,6 +12,11 @@ class Post extends BaseModel {
     	'summary'    => 'required|max:200',
     	'image'      => 'required|max:200'
 	];
+
+	public function user()
+	{
+	    return $this->belongsTo('User');
+	}
 }
 
 ?>

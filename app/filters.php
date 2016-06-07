@@ -43,9 +43,11 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('login');
+			return Redirect::guest('/login');
 		}
 	}
+
+	// Auth Admin, Auth publisher, auth etc.
 });
 
 

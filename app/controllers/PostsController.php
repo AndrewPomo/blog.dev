@@ -7,6 +7,12 @@ class PostsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+
+	public function __construct()
+    {
+        $this->beforeFilter('auth', ['except' => ['index', 'show']]);
+    }
+
 	public function index()
 	{
 		$posts = Post::paginate(5);
