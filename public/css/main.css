@@ -8,6 +8,7 @@ body {
 	padding:10px 20px 10px 20px;
 	background-color: white;
 	color: black;
+	border-radius: 0px;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -65,17 +66,22 @@ body {
 	color: white;
 	font-weight: 800;
 	margin-top: 15px;
-	
 	background-color: transparent;
 }
 
 #post-holder{
 	background-color: white;
-}
-
-#post-holder.col-xs-12 {
 	margin-top: -200px;
 }
+
+#post-holder-normal{
+	background-color: white;
+}
+
+#post-content-holder h1 {
+	font-size: 28px;
+}
+
 
 .post-date {
 	font-size: 10px;
@@ -108,8 +114,40 @@ body {
 	color:white;
 }
 
+.flashbar {
+	margin-top: -20px;
+	border-radius: 0px;
+}
+
 @media screen and (min-width: 768px) {
-	#post-holder.col-md-10 {
+	#post-holder {
 		margin-top: -140px;
 	}
+
+	#post-content-holder h1 {
+		font-size: 45px;
+	}
+}
+
+#writeQuotes{
+	font-style: italic;
+	margin-top:20px;
+}
+
+#first-post {
+	margin-top: 50px;
+	background-color: #5cb85c;
+	border-radius:6px;
+	color: white;
+	padding: 5px;
+}
+
+.thumbnail {
+  width:95px;
+  margin:0px;
+}
+
+.edit-btn {
+  background-color: rgb(255,146,27);
+  color: white;
 }

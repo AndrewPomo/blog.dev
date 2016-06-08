@@ -19,6 +19,8 @@ class BaseController extends Controller {
 	{
 	    // require csrf token for all post, delete, and put actions
 	    $this->beforeFilter('csrf', array('on' => array('post', 'delete', 'put')));
+
+	    $user = Auth::user();
 	}
 
 }

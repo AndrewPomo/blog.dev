@@ -39,7 +39,7 @@
 	@endif
 		<fieldset class="form-group">
 			{{ Form::label('image', 'Upload Your Post\'s Featured Image') }}
-			{{ Form::file('image', $post->image, ['class' => 'form-control']) }}
+			{{ Form::file('image', Input::old('image'), ['class' => 'form-control']) }}
 		</fieldset>
 	@if ($errors->has('summary'))
 	 <div class="alert alert-danger">{{ $errors->first('summary', '<span class="help-block">:message</span>') }}</div>

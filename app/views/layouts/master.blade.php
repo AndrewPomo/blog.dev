@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,800,700,600,400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/main.css" crossorigin="anonymous">
+	@if (Auth::check())
+		<?php $user = Auth::user() ?>
+	@endif
 	@yield('top-links')
 </head>
 <body>
@@ -28,14 +31,19 @@
 		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    <ul class="nav navbar-nav">
 		      <li><a href="/posts">Blog<span class="sr-only">(current)</span></a></li>
-		      <li><a href="/resume">Resume</a></li>
-		      <li><a href="/portfolio">Portfolio</a></li>
-		      <li><a href="#">Contact</a></li>
+		      <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Me<span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="/resume">Resume</a></li>
+	            <li><a href="/portfolio">Portfolio</a></li>
+	        		<li><a href="mailto:{{{$user['email']}}}">Write me</a></li>
+	          </ul>
+	        </li>
 
 		      <!-- These buttons only show if the user is logged IN -->
 		      
-		      @if (Auth::check()) 
-		        <li><a href="/ads/create">Create A New Post</a></li>   
+		      @if (Auth::check())
+		        <li><a href="/posts/create">Create A New Post</a></li>   
 		      @endif
 		    </ul>
 
@@ -44,8 +52,9 @@
 	        <!-- Logout & Profile Buttons -->
 	        <!-- These buttons only show if the user is logged IN -->
 	        @if (Auth::check())
+	      
 	        <a href="/logout" type="button" class="btn btn-default" id="logout-button">Logout</a>
-	        <a href="/users/account" type="button" class="btn btn-default" id="profile-button">Profile</a>
+	        <a href="/users/{{{$user->id}}}" type="button" class="btn btn-default" id="profile-button">Profile</a>
 	        @else
 
 	        <!-- Login & Signup Buttons -->
@@ -77,7 +86,7 @@
 									@endif
 									<fieldset class="form-group">
 										{{ Form::label('password', 'Password') }}
-										{{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Create a Password']) }}
+										{{ Form::password('password', ['class' => 'form-control', 'placeholder' => ' Enter Your Password']) }}
 									</fieldset>
 									<button type="submit" class="btn btn-success center-block">CLICK TO LOG IN</button>
 								{{ Form::close() }}
@@ -97,12 +106,19 @@
 	              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 	              <h4 class="modal-title text-center" id="mySmallModalLabel">Let's Get Started!</h4>
 								{{ Form::open(array('action' => 'UsersController@store')) }}
-									@if ($errors->has('name'))
+									@if ($errors->has('first_name'))
 									<div class="alert alert-danger">{{ $errors->first('name', '<span class="help-block">:message</span>') }}</div>
 									@endif
 									<fieldset class="form-group">
-										{{ Form::label('name', 'Name') }}
-										{{ Form::text('name', Input::old('name'), ['class' => 'form-control', 'placeholder' => 'Your Name']) }}
+										{{ Form::label('first_name', 'First Name') }}
+										{{ Form::text('first_name', Input::old('first_name'), ['class' => 'form-control', 'placeholder' => 'Your First Name']) }}
+									</fieldset>
+									@if ($errors->has('last_name'))
+									<div class="alert alert-danger">{{ $errors->first('last_name', '<span class="help-block">:message</span>') }}</div>
+									@endif
+									<fieldset class="form-group">
+										{{ Form::label('last_name', 'Last Name') }}
+										{{ Form::text('last_name', Input::old('last_name'), ['class' => 'form-control', 'placeholder' => 'Your Last Name']) }}
 									</fieldset>
 									@if ($errors->has('email'))
 									<div class="alert alert-danger">{{ $errors->first('email', '<span class="help-block">:message</span>') }}</div>
@@ -128,16 +144,17 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 	@if (Session::has('successMessage'))
-	    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+	    <div class="alert alert-success flashbar">{{{ Session::get('successMessage') }}}</div>
 	@endif
 	@if (Session::has('errorMessage'))
-	    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+	    <div class="alert alert-danger flashbar">{{{ Session::get('errorMessage') }}}</div>
 	@endif
-    @yield('content')
+  @yield('content')
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

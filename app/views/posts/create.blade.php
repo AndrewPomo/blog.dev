@@ -9,7 +9,9 @@
 <link href="/css/main.css" rel="stylesheet">
 
 @section('content')
-
+@if (Auth::check())
+		<?php $user = Auth::user() ?>
+@endif
 <div class="container">
 	<h1 class="createHead">Create A New Post!</h1>
 	{{ Form::open(array('action' => 'PostsController@store', 'files' => true)) }}
@@ -19,13 +21,6 @@
 		<fieldset class="form-group">
 			{{ Form::label('title', 'Title') }}
 			{{ Form::text('title', Input::old('title'), ['class' => 'form-control', 'placeholder' => 'A Title For Your Post']) }}
-		</fieldset>
-	@if ($errors->has('author'))
-	 <div class="alert alert-danger">{{ $errors->first('author', '<span class="help-block">:message</span>') }}</div>
-	@endif
-		<fieldset class="form-group">
-			{{ Form::label('author', 'Author') }}
-			{{ Form::text('author', Input::old('author'), ['class' => 'form-control', 'placeholder' => 'Enter Your Name']) }}
 		</fieldset>
 	@if ($errors->has('categories'))
 	 <div class="alert alert-danger">{{ $errors->first('categories', '<span class="help-block">:message</span>') }}</div>
@@ -55,6 +50,7 @@
 			{{ Form::label('body', 'Body') }}
 			{{ Form::textarea('body', Input::old('body'), ['class' => 'form-control', 'placeholder' => 'Write Your Post Here']) }}
 		</fieldset>
+		{{ Form::hidden('author', $user->first_name . ' ' . $user->last_name) }}
 		<button type="submit" class="btn btn-success">Publish</button>
 	{{ Form::close() }}
 </div>

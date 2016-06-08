@@ -19,8 +19,9 @@ class UsersController extends \BaseController {
 			'email' => Input::get('email'), 
 			'password' => Input::get('password')]
 		)) {
+			$user = Auth::user();
 			Session::flash('successMessage', 'Login successful!');
-	    	return Redirect::intended('/posts');
+	    	return Redirect::intended("/users/$user->id");
 		} else {
 		    // login failed, go back to the login screen
 		    Session::flash('errorMessage', 'Something went wrong with your login.');
@@ -68,7 +69,8 @@ class UsersController extends \BaseController {
 	    } else {
 	        // validation succeeded, create and save the post
 			$newUser = new User();
-			$newUser->name = Input::get('name');
+			$newUser->first_name = Input::get('first_name');
+			$newUser->last_name = Input::get('last_name');
 			$newUser->email = Input::get('email');
 			$newUser->password = Input::get('password');
 			
@@ -82,7 +84,7 @@ class UsersController extends \BaseController {
 			
 			$newUser->save();
 			Session::flash('successMessage', 'User has been saved');
-			Log::info("New User Created: id= $newUser->id, title= $newUser->name, author= $newUser->username, categories= $newUser->email");
+			Log::info("New User Created: id= $newUser->id, title= $newUser->name, email= $newUser->email");
 			return Redirect::back();
 		}
 	}
@@ -96,8 +98,10 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
+		
 		$user = User::find($id);
-		return View::make("users.show")->with('user', $user);
+		$posts = $user->posts;
+		return View::make("users.show")->with('user', $user)->with('posts', $posts);
 	}
 
 
@@ -132,10 +136,10 @@ class UsersController extends \BaseController {
 	    } else {
 	        // validation succeeded, create and save the post
 			$editUser = User::find($id);
-			$editUser->name = Input::get('title');
-			$editUser->username = Input::get('author');
-			$editUser->email = Input::get('categories');
-			$editUser->password = Auth::id();
+			$editUser->first_name = Input::get('first_name');
+			$editUser->last_name = Input::get('last_name');
+			$editUser->email = Input::get('email');
+			$editUser->password = Input::get('password');
 			
 			if (Input::hasFile('image')) {
 				$imagePath = 'img/userImg/';
@@ -147,7 +151,7 @@ class UsersController extends \BaseController {
 			
 			$editUser->save();
 			Session::flash('successMessage', 'User has been saved');
-			Log::info("User Updated: id= $editUser->id, title= $editUser->name, author= $editUser->username, categories= $editUser->email");
+			Log::info("User Updated: id= $newUser->id, title= $newUser->name, email= $newUser->email");
 			return View::make("users.show")->with('user', $editUser);
 	    }
 	}

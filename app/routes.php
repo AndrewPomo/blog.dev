@@ -30,3 +30,5 @@ Route::resource('users', 'UsersController');
 
 Route::post('/login', 'UsersController@doLogin');
 Route::get('/logout', 'UsersController@logout');
+
+Route::post('/delete', 'PostsController@destroy');

@@ -91,9 +91,14 @@ class PostsController extends \BaseController {
 	public function edit($id)
 	{
         $post = Post::find($id);
-        return View::make('posts.edit')->with(['post' => $post]);
+    	$user = Auth::user();
+    	if ($user->id == $post->user_id) {
+        	return View::make('posts.edit')->with(['post' => $post]);
+        } else {
+        	Session::flash('errorMessage', 'You can\'t edit a post you don\'t own!');
+		    return Redirect::intended('/posts');
+        }
 	}
-
 
 	/**
 	 * Update the specified resource in storage.
@@ -141,9 +146,17 @@ class PostsController extends \BaseController {
 	public function destroy($id)
 	{
 		$deadPost = Post::find($id);
-		$deadPost->delete();
-		Session::flash('successMessage', 'Post successfully deleted!');
-		return View::make("posts.show")->with('post', $deadPost);
+    	$user = Auth::user();
+    	if ($user->id == $deadPost->user_id) {
+			$deadPost->delete();
+			Session::flash('successMessage', 'Post successfully deleted!');
+			return Redirect::intended("/users/$user->id");
+        } else {
+        	Session::flash('errorMessage', 'You can\'t delete a post you don\'t own!');
+		    return Redirect::intended('/posts');
+        }
+	
+		
 	}
 
 
