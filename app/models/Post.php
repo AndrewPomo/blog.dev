@@ -12,6 +12,13 @@ class Post extends BaseModel {
     	'image'      => 'required|max:200'
 	];
 
+	public static $editrules = [
+		'title'      => 'required|max:100',
+    	'body'       => 'required|max:1000000',
+    	'categories' => 'required|max:100',
+    	'summary'    => 'required|max:200'
+	];
+
 	public function user()
 	{
 	    return $this->belongsTo('User');

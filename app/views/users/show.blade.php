@@ -10,20 +10,22 @@
 
 @section('content')
 <!-- USER INFO -->
-<div class="row">
-	<div class=" col-xs-12">
-        <div class="col-sm-12 col-lg-offset-1">
-        	<div class="row col-xs-12">
-	            <div class="col-xs-6">
-	                <h1>Welcome, {{{ $user['first_name'] }}}!</h1>
-            	</div>             
-	            <div id="writeQuotes" class="col-xs-6 text-right">
-	                <p id="quote"> </p>
-	                <p id="author"> </p>
-	            </div>
+<div class="container-fluid">
+	<div class="row">
+		<div class=" col-xs-12">
+	        <div class="col-sm-12 col-lg-offset-1">
+	        	<div class="row col-xs-12">
+		            <div id="user-title" class="col-xs-6">
+		                <h1 >Welcome, {{{ $user['first_name'] }}}!</h1>
+	            	</div>             
+		            <div id="writeQuotes" class="col-xs-6 text-right">
+		                <p id="quote"> </p>
+		                <p id="author"> </p>
+		            </div>
+		        </div>
 	        </div>
-        </div>
-    </div>
+	    </div>
+	</div>
 </div>
 <!-- END USER INFO -->
 
@@ -33,7 +35,7 @@
 		
 
 		<hr class="ad-divider">
-        @if (!empty($posts))
+        @if (!$posts->isEmpty())
         <?php $postNum = 1; ?>
         <h2 class="row text-center recent-ads-header">Your Latest Posts</h2>
         <div class="container">
@@ -61,8 +63,12 @@
 					    <div class="modal-header">
 					      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 					      <h4 class="modal-title text-center" id="mySmallModalLabel">That's risky business! You sure you want to delete this post?</h4>
-				      	  <button type="button" class="btn btn-sml" id='dont-delete' data-dismiss="modal" aria-label="Close">Don't delete!</button>
-				          <a href="{{{action('PostsController@destroy($post->id)')}}}" id="deletePost" class="btn btn-danger btn-sml" method="DELETE">Delete</a>
+					      <div id="post-actions" class="row col-xs-10 col-xs-offset-1">
+					      	  <button type="button" class="btn btn-sml pull-left" id='dont-delete' data-dismiss="modal" aria-label="Close">Don't delete!</button>
+				              {{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'delete', 'class' => 'pull-right')) }}
+						          <button type="submit" class="btn btn-danger btn-mini pull-right">Delete</button>
+						      {{ Form::close() }}
+						  </div>
 					    </div>
 					  </div>
 					</div>

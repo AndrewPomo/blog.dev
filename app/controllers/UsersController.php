@@ -98,9 +98,9 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		
 		$user = User::find($id);
 		$posts = $user->posts;
+
 		return View::make("users.show")->with('user', $user)->with('posts', $posts);
 	}
 

@@ -6,9 +6,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,800,700,600,400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/main.css" crossorigin="anonymous">
-	@if (Auth::check())
-		<?php $user = Auth::user() ?>
-	@endif
+	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+	<?php $user = Auth::user() ?>
 	@yield('top-links')
 </head>
 <body>
@@ -150,11 +149,27 @@
 	    <div class="alert alert-danger flashbar">{{{ Session::get('errorMessage') }}}</div>
 	@endif
   @yield('content')
+  	<footer class="footer">
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <a href="mailto:{{{$user['email']}}}?"><span class="glyphicon glyphicon-envelope footer_mail" aria-hidden="true"></span> - {{{$user['email']}}}</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <p class="copyright">© 2016 Andrew Powell-Morse. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+      </div>
+    </footer>
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="/js/main.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
 </body>
 </html>

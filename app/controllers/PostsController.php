@@ -108,7 +108,7 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$validator = Validator::make(Input::all(), Post::$rules);
+		$validator = Validator::make(Input::all(), Post::$editrules);
 
 	    // attempt validation
 	    if ($validator->fails()) {

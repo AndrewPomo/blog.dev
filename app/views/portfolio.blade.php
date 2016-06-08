@@ -5,7 +5,7 @@
 @stop
 
 @section('top-links')
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/my_site.css" rel="stylesheet">
 @stop
 
 @section('content')
@@ -20,15 +20,14 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="thumbnail featured">
-                        <img alt="Facebook" src="/img/facebook.png">
+                         <img alt="Simon" src="/img/simon.png">
                         <div class="caption">
                             <h2 class="hidden-xs hidden-sm">Simon</h2>
                             <h3 class="hidden-md hidden-lg">Simon <a class="btn btn-primary port_butt hidden-md hidden-lg" href=
-                            "https://www.facebook.com/" role="button" target="blank">Visit Facebook.com</a></h3>
-                            <p class="hidden-md hidden-lg">Stay Connected.</p>
+                            "http://blog.dev/simplesimon/" role="button" target="blank">Play Simon</a></h3>
+                            <p class="hidden-md hidden-lg">Somewhat Deceiving</p>
                             <p class="hidden-xs hidden-sm featured">
-                            Founded in 2004, Facebook’s mission is to give people the power to share and make the world more open and connected. People use Facebook to stay connected with friends and family, to discover what’s going on in the world, and to share and
-                            express what matters to them.</p>
+                            This is a simple JavaScript game that behaves like the old school hand-held game 'Simon'. This was one of my favorite projects while at Codeup. You'll probably see why.</p>
                             <p class="hidden-xs hidden-sm featured"><a class="btn btn-primary" href=
                             "https://www.facebook.com/" role="button" target="blank">Visit Facebook.com</a></p>
                         </div>
@@ -123,25 +122,5 @@
             <p><em>-Isaac Castillo</em></p>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <ul class="list-unstyled footer_list">
-                    <li class="footer_li">Home</li>
-                    <li class="footer_li">Portfolio</li>
-                    <li class="footer_li">Experience</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <span class="glyphicon glyphicon-envelope footer_mail" aria-hidden="true"> <a href="mailto:AndrewPomo815@gmail.com?">AndrewPomo815@gmail.com</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <p class="copyright">© 2016 Andrew Powell-Morse. All Rights Reserved.
-            </div>
-        </div>
-    </div>
+    
 @stop

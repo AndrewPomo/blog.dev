@@ -34,9 +34,6 @@
 			{{ Form::label('categories', 'Categories') }}
 			{{ Form::text('categories', $post->categories, ['class' => 'form-control', 'placeholder' => 'Enter Some Categories For Your Post']) }}
 		</fieldset>
-	@if ($errors->has('image'))
-	 <div class="alert alert-danger">{{ $errors->first('image', '<span class="help-block">:message</span>') }}</div>
-	@endif
 		<fieldset class="form-group">
 			{{ Form::label('image', 'Upload Your Post\'s Featured Image') }}
 			{{ Form::file('image', Input::old('image'), ['class' => 'form-control']) }}

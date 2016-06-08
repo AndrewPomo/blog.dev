@@ -30,7 +30,7 @@
 			<h1><span id='roboto-slab'>{{{$post->title}}}</span></h1>
 			<p><span id='roboto-slab-small'>{{{$post->author}}} | {{{$post->created_at->setTimezone('America/New_York')->format('F jS, Y')}}}</span></p>
 		    <p>Tagged: <em>{{{$post->categories}}}</em></p>
-		    <p> {{{$post->body}}} </p>
+		    <p> {{$post->body}} </p>
 	    </div>
 	</div>
 </div>

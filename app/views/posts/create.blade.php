@@ -54,4 +54,6 @@
 		<button type="submit" class="btn btn-success">Publish</button>
 	{{ Form::close() }}
 </div>
+
 @stop
+

@@ -1,12 +1,11 @@
-@extends('layouts.master')
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
 
-@section('title-tag')
-    Simple Simon Game
-@stop
-
-@section('top-links')
 	<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<style type="text/css">
 	body {
 		font-family: Open Sans;
@@ -146,11 +145,10 @@
           box-shadow: none;
 }
 
-
-
 	</style>
-@stop
-@section('content')
+	</head>
+<body>
+
 	<!-- simplesimon.dev -->
 	<audio id="bigSwitch">
 			<source src="/Sounds/bigSwitch.wav" type="audio/wav">
@@ -587,4 +585,5 @@
 })();
 
 </script>
-@stop
+</body>
+</html>
