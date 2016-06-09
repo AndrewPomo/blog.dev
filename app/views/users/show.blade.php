@@ -13,7 +13,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class=" col-xs-12">
-	        <div class="col-sm-12 col-lg-offset-1">
+	        <div class="col-sm-12">
 	        	<div class="row col-xs-12">
 		            <div id="user-title" class="col-xs-6">
 		                <h1 >Welcome, {{{ $user['first_name'] }}}!</h1>
