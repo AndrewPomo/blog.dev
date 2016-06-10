@@ -13,7 +13,7 @@
 <div id='blog-hero' class="container-fluid">
 	<div class="container">
 		<div id='blog-jumbo' class="jumbotron">
-			<h1><span id='roboto-slab'>this is my blog.</h1>
+			<h1><span class='roboto-slab roboto-bold'>this is my blog.</h1>
 		</div>
 	</div>
 </div>

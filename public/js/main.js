@@ -3,7 +3,7 @@
 			
     $(document).ready(function() {
 
-    	//available quotes
+    	// Quote Generator
 	    var famousQuotes = [
 			{
 				"words": "All you have to do is write one true sentence. Write the truest sentence that you know.",
@@ -32,5 +32,16 @@
     	var person = quote.person;
     	$('#quote').html(words);
     	$('#author').html('- ' + person);
+    	// End Quote Generator
+
+    	
+
+    	$(".read-more").click(function () {
+
+    		$(this).next().toggle();
+    		$(this).text(
+      		$(this).next().is(':visible') ? "Hide details" : "Read more")
+
+		});
     })
 })();
