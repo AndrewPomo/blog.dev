@@ -58,6 +58,12 @@ body {
 	background-image: url('/img/better-wood.jpg');
 }
 
+#resume-hero {
+	margin-top: -20px;
+	height:450px;
+	background-image: url('/img/better-wood.jpg');
+}
+
 #post-hero {
 	margin-top: -20px;
 	height:350px;

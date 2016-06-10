@@ -16,7 +16,9 @@ Route::get('/resume', 'HomeController@resume');
 
 Route::get('/portfolio', 'HomeController@portfolio');
 
-Route::get('/simplesimon', 'HomeController@simon');
+Route::get('/simple-simon', 'HomeController@simon');
+
+Route::get('/bieber-beater', 'HomeController@bieberBeater');
 
 /* If you want to have a variable injected into your route, Format is {variable?}.
 Format for default variable is function($name = default variable)

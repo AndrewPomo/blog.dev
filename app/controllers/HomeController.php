@@ -36,6 +36,11 @@ class HomeController extends BaseController {
 	    return View::make('simplesimon');
 	}
 
+	public function bieberBeater()
+	{
+	    return View::make('bieber-beater');
+	}
+
 /* If you want to have a variable injected into your route, Format is {variable?}.
 	public function($name = default variable)
 */
