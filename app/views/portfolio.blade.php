@@ -24,29 +24,27 @@
                         <div class="caption">
                             <h2 class="hidden-xs hidden-sm">Simon</h2>
                             <h3 class="hidden-md hidden-lg">Simon <a class="btn btn-primary port_butt hidden-md hidden-lg" href=
-                            "http://blog.dev/simplesimon/" role="button" target="blank">Play Simon</a></h3>
-                            <p class="hidden-md hidden-lg">Somewhat Deceiving</p>
+                            "{{{action('HomeController@simon')}}}" role="button" target="blank">Play Simon</a></h3>
+                            <p class="hidden-md hidden-lg">Don't be fooled by Bambi and Bird.</p>
                             <p class="hidden-xs hidden-sm featured">
-                            This is a simple JavaScript game that behaves like the old school hand-held game 'Simon'. This was one of my favorite projects while at Codeup. You'll probably see why.</p>
+                            This simple JavaScript game is an admittedly weird version of the old school hand-held game 'Simon'. I enjoyed this whole project, but especially writing the sassy dialogue between Bird and Bambi.</p>
                             <p class="hidden-xs hidden-sm featured"><a class="btn btn-primary" href=
-                            "https://www.facebook.com/" role="button" target="blank">Visit Facebook.com</a></p>
+                            "{{{action('HomeController@simon')}}}" role="button" target="blank">Visit Facebook.com</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="thumbnail featured">
-                        <img alt="Amazon" src="/img/amazon.png">
+                        <img alt="Bieber Beater" src="/img/bieber-beater.png">
                         <div class="caption">
-                            <h2 class="hidden-xs hidden-sm">Amazon</h2>
-                            <h3 class="hidden-md hidden-lg">Amazon <a class="btn btn-primary port_butt hidden-md hidden-lg" href=
-                            "http://www.amazon.com/" role="button" target="blank">Visit Amazon.com</a></h3>
-                            <p class="hidden-md hidden-lg">Earth's most customer-centric company.</p>
+                            <h2 class="hidden-xs hidden-sm">Bieber Beater</h2>
+                            <h3 class="hidden-md hidden-lg">Bieber Beater <a class="btn btn-primary port_butt hidden-md hidden-lg" href=
+                            "{{{action('HomeController@bieberBeater')}}}" role="button" target="blank">Play Bieber Beater</a></h3>
+                            <p class="hidden-md hidden-lg">Is there a more punchable face?</p>
                             <p class="hidden-xs hidden-sm featured">
-                            Amazon.com strives to be Earth's most
-                            customer-centric company where people can find and discover virtually anything they want to buy online. By giving customers more of what they want, Amazon.com continues to grow and evolve as a
-                            world-class e-commerce platform.</p>
+                            Another simple JavaScript wack-a-mole game featuring everyone's least-favorite Canadian pop star! Neat features include the clock, which adds time to your timer, and the CSS 'holes' that I made. Beat away!</p>
                             <p class="hidden-xs hidden-sm featured"><a class="btn btn-primary" href=
-                            "http://www.amazon.com/" role="button" target="blank">Visit Amazon.com</a></p>
+                            "{{{action('HomeController@bieberBeater')}}}" role="button" target="blank">Visit Bieber Beater.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -55,13 +53,13 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="thumbnail">
                         <img alt="..." class="thumbnail-image" src=
-                        "/img/netflix.png">
+                        "/img/quickweather.png">
                         <div class="caption">
-                            <h3>Netflix <a class="btn btn-primary port_butt hidden-md hidden-lg" href=
-                            "http://www.netflix.com" role="button" target="blank">Visit Netflix.com</a></h3>
-                            <p>See what's next.</p>
-                            <p class="hidden-xs hidden-sm featured"><a class="btn btn-primary" href=
-                            "http://www.netflix.com" role="button" target="blank">Visit Netflix.com</a></p>
+                            <h3>QuickWeather <a class="btn btn-primary port_butt hidden-md hidden-lg" href=
+                            "{{{action('HomeController@quickWeather')}}}" role="button" target="blank">Try QuickWeather</a></h3>
+                            <p>Drop the pin, see the weather.</p>
+                            <p class="hidden-xs hidden-sm featured">Used JavaScript, the Google Maps API, and the OpenWeatherMap API to build this interactive weather forecasting map. My touch was changing the background to match the current weather at the pin!<a class="btn btn-primary" href=
+                            "{{{action('HomeController@quickWeather')}}}" role="button" target="blank">Try QuickWeather</a></p>
                         </div>
                     </div>
                 </div>

@@ -20,6 +20,8 @@ Route::get('/simple-simon', 'HomeController@simon');
 
 Route::get('/bieber-beater', 'HomeController@bieberBeater');
 
+Route::get('/quickweather', 'HomeController@quickWeather');
+
 /* If you want to have a variable injected into your route, Format is {variable?}.
 Format for default variable is function($name = default variable)
 */
