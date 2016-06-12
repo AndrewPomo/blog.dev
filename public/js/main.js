@@ -34,14 +34,13 @@
     	$('#author').html('- ' + person);
     	// End Quote Generator
 
-    	
-
+    	// Toggle Resume Details
     	$(".read-more").click(function () {
-
     		$(this).next().toggle();
     		$(this).text(
       		$(this).next().is(':visible') ? "Hide details" : "Read more")
 
 		});
+		// End Toggle Resume Details
     })
 })();
