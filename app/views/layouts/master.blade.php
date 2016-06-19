@@ -21,23 +21,11 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a href="/posts">
+	      <a href="/">
 	      	<img src="/img/pomo-mark.png" href="/posts" class="navbar-brand">
 	      </a>
 	    </div>
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		    <ul class="nav navbar-nav">
-		      <li><a href="/posts">Blog<span class="sr-only">(current)</span></a></li>
-		      <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Me<span class="caret"></span></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="/resume">Resume</a></li>
-	            <li><a href="/portfolio">Portfolio</a></li>
-	        		<li><a href={{{'mailto:andrewpomo815@gmail.com'}}}>Write me</a></li>
-	          </ul>
-	        </li>
 
 		      <!-- These buttons only show if the user is logged IN -->
 		      
@@ -47,6 +35,16 @@
 		    </ul>
 
 	     <div class="nav-menu btn-group pull-right" role="group">
+	     <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <ul class="nav navbar-nav">
+		      <li><a href="/posts">About Me<span class="sr-only">(current)</span></a></li>
+		      <li><a href="/posts">Blog<span class="sr-only">(current)</span></a></li>
+		      <li><a href="/resume">Resume</a></li>
+		      <li><a href="/portfolio">Portfolio</a></li>
+		      <li><a href={{{'mailto:andrewpomo815@gmail.com'}}}>Write me</a></li>
+	        </ul>
+	      
 
 	        <!-- Logout & Profile Buttons -->
 	        <!-- These buttons only show if the user is logged IN -->
@@ -73,22 +71,22 @@
 	              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 	              <h4 class="modal-title" id="mySmallModalLabel">Welcome back!</h4>
 	              {{ Form::open(array('action' => 'UsersController@doLogin')) }}
-									@if ($errors->has('email'))
-									<div class="alert alert-danger">{{ $errors->first('name', '<span class="help-block">:message</span>') }}</div>
-									@endif
-									<fieldset class="form-group">
-										{{ Form::label('email', 'Email') }}
-										{{ Form::text('email', Input::old('Email'), ['class' => 'form-control', 'placeholder' => 'Your Email']) }}
-									</fieldset>
-									@if ($errors->has('password'))
-									<div class="alert alert-danger">{{ $errors->first('password', '<span class="help-block">:message</span>') }}</div>
-									@endif
-									<fieldset class="form-group">
-										{{ Form::label('password', 'Password') }}
-										{{ Form::password('password', ['class' => 'form-control', 'placeholder' => ' Enter Your Password']) }}
-									</fieldset>
-									<button type="submit" class="btn btn-success center-block">CLICK TO LOG IN</button>
-								{{ Form::close() }}
+					@if ($errors->has('email'))
+					<div class="alert alert-danger">{{ $errors->first('name', '<span class="help-block">:message</span>') }}</div>
+					@endif
+					<fieldset class="form-group">
+						{{ Form::label('email', 'Email') }}
+						{{ Form::text('email', Input::old('Email'), ['class' => 'form-control', 'placeholder' => 'Your Email']) }}
+					</fieldset>
+					@if ($errors->has('password'))
+					<div class="alert alert-danger">{{ $errors->first('password', '<span class="help-block">:message</span>') }}</div>
+					@endif
+					<fieldset class="form-group">
+						{{ Form::label('password', 'Password') }}
+						{{ Form::password('password', ['class' => 'form-control', 'placeholder' => ' Enter Your Password']) }}
+					</fieldset>
+					<button type="submit" class="btn btn-success center-block">CLICK TO LOG IN</button>
+				  {{ Form::close() }}
 	              <div class="text-center">
 	                  <a href="#" id="forgotPasswordLink">Forgot your password?</a>
 	              </div>
@@ -149,21 +147,6 @@
 	    <div class="alert alert-danger flashbar">{{{ Session::get('errorMessage') }}}</div>
 	@endif
   @yield('content')
-  	<footer class="footer">
-      <div class="container">
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <a href="mailto:{{{$user['email']}}}?"><span class="glyphicon glyphicon-envelope footer_mail" aria-hidden="true"></span> - andrewpomo815@gmail.com</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <p class="copyright">© 2016 Andrew Powell-Morse. All Rights Reserved.
-            </div>
-        </div>
-    </div>
-      </div>
-    </footer>
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

@@ -4,16 +4,16 @@
     $(document).ready(function() {
 
     	// Home page language switcher
-    	var languages = ["MySQL", "JavaScript", "Linux", "CSS", "HTML5", "Git", "PHP"];
+    	var languages = ["MySQL", "JavaScript", "startups", "Linux", "CSS", "Git", "copywriting", "PHP"];
     	var i = 0;
     	setInterval (function() {
 			if (i == languages.length){
 				i = 0;
 			}
 			var language = languages[i];
-	    	$("#reallybig").fadeOut(1000, function(){
+	    	$("#languages").fadeOut(1000, function(){
 	    		i++;
-	    		$("#reallybig").html(language).fadeIn(1000);
+	    		$("#languages").html(language).fadeIn(1000);
 	    	});    		
 	    }, 3500);
 		// End home page language switcher

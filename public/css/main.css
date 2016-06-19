@@ -1,18 +1,18 @@
 body {
-    background-image: url(/img/ignasi_pattern_s.png);
+    background-image: url(/img/white_wall/white_wall.png);
     font-family: Open Sans;
 }
 
 .navbar {
 	height: 85px;
 	padding:10px 20px 10px 20px;
-	background-color: white;
-	color: black;
+	background-color: transparent;
+	color: rgb(110, 110, 110);
 	border-radius: 0px;
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #000000;
+	padding-left:0px;
 	margin:0px 10px 0px 10px;
 }
 
@@ -38,13 +38,8 @@ body {
 	padding-bottom: 14px;
 }
 
-.nav-menu {
-	margin-bottom:15px;
-	margin-top:15px;
-}
-
-.navbar-collapse {
-	background-color: white;
+.navbar-menu {
+	color:rgb(110, 110, 110);
 }
 
 .navbar-nav>li>a {
@@ -73,6 +68,13 @@ body {
 	color: white;
 	font-weight: 800;
 	margin-top: 15px;
+	background-color: transparent;
+}
+
+#home-jumbo {
+	color: rgb(110, 110, 110);
+	font-weight: 800;
+	padding:0px;
 	background-color: transparent;
 }
 
@@ -222,5 +224,69 @@ body {
 }
 
 #reallybig {
-	font-size: 48px;
+	font-size: 5em;
+}
+
+#languages {
+	color: rgb(19, 56, 132);
+	font-weight: 600;
+}
+
+.home-name {
+	margin-bottom:0px;
+	margin-top:0px;
+}
+
+#firstname, #lastname {
+	color: rgb(70, 70, 70);
+}
+
+.fa {
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+/*.fa.fa-envelope-square {
+	margin-left: 0px;
+}*/
+
+.fa:hover{
+	color: rgb(19, 56, 132);
+}
+
+a>.fa-4 {
+	font-size:7em;
+	color: rgb(110,110,110);
+}
+
+.homebutton {
+	color: rgb(110,110,110);
+	font-weight: 500;
+	background-color: transparent;
+	border: 1px solid rgb(110,110,110);
+	border-radius: 30px;
+	padding: 10px 25px 10px 25px;
+	margin: 15px; 
+}
+
+.homebutton:hover {
+	background-color: rgb(19, 56, 132);
+	color: white;
+	border: 1px solid rgb(19, 56, 132);
+}
+
+#homeresume {
+	margin-left: 0px
+}
+
+#bigger-margin {
+	margin-bottom: 45px
+}
+
+#intro {
+	margin-top:70px;
+}
+
+#linksintro {
+	color: rgb(70, 70, 70);
 }
