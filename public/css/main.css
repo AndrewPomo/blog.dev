@@ -294,11 +294,6 @@ body {
 	color: rgb(70, 70, 70);
 }
 
-.fa {
-	margin-right: 25px;
-	margin-left: 25px;
-}
-
 .fa:hover{
 	color: rgb(19, 56, 132);
 }
@@ -320,4 +315,5 @@ a>.fa-4 {
 
 #linksintro {
 	color: rgb(70, 70, 70);
+	font-size:40px;
 }
