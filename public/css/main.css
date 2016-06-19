@@ -148,9 +148,26 @@ body {
 	margin-top:10px;
 }
 
+#home-buttons {
+	margin-top: 10px
+}
+
 .homebutton {
-		font-size:18px;
-	}
+	color: white;
+	font-weight: 500;
+	font-size: 25px;
+	background-color: rgb(19, 56, 132);
+	border: 1px solid rgb(19, 56, 132);
+	border-radius: 30px;
+	padding: 10px 25px 10px 25px;
+	margin: 10px; 
+}
+
+.homebutton:hover {
+	background-color: white;
+	color: rgb(19, 56, 132);
+	border: 1px solid rgb(19, 56, 132);
+}
 
 @media screen and (min-width: 768px) {
 	.navbar {	
@@ -291,21 +308,7 @@ a>.fa-4 {
 	color: rgb(110,110,110);
 }
 
-.homebutton {
-	color: rgb(110,110,110);
-	font-weight: 500;
-	background-color: transparent;
-	border: 1px solid rgb(110,110,110);
-	border-radius: 30px;
-	padding: 10px 25px 10px 25px;
-	margin: 10px; 
-}
 
-.homebutton:hover {
-	background-color: rgb(19, 56, 132);
-	color: white;
-	border: 1px solid rgb(19, 56, 132);
-}
 
 #homeresume {
 	margin-left: 0px
