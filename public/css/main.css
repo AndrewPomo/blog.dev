@@ -149,7 +149,8 @@ body {
 }
 
 #home-buttons {
-	margin-top: 10px
+	margin-top: 10px;
+	padding: 0px;
 }
 
 .homebutton {
@@ -160,7 +161,6 @@ body {
 	border: 1px solid rgb(19, 56, 132);
 	border-radius: 30px;
 	padding: 10px 25px 10px 25px;
-	margin: 10px; 
 }
 
 .homebutton:hover {
