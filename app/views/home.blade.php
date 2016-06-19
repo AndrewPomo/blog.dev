@@ -13,13 +13,14 @@
 <div id='home-hero' class="container">
     <div id='home-jumbo' class="jumbotron">
     	<div class="row">
-	    	<div class="col-xs-7">
+	    	<div class="col-md-7 col-xs-12">
 			    <h1 id="firstname" class='roboto-slab home-name'>Andrew</h1>
 			    <h1 id="lastname" class='roboto-slab home-name'>Powell-Morse</h1>
 			    <p>Full Stack Developer | Marketer | Project Manager</p>
 			    <p id='reallybig'>I love <span id="languages">PHP</span></p>
 			</div>
-			<div id="intro" class="col-xs-5">
+			<hr class="">
+			<div id="intro" class="col-md-5 col-xs-12">
 				<p>I'm Andrew, a full-stack developer with five years of startup marketing and project management experience. I want to build things that matter.</p>
 				<h2 id="home-buttons"><a href="/resume"><button id="homeresume"class="homebutton">Resume</button></a><a href="/portfolio"><button class="homebutton">Portfolio</button></a></h2>
 			</div>

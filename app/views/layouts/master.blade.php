@@ -87,9 +87,6 @@
 					</fieldset>
 					<button type="submit" class="btn btn-success center-block">CLICK TO LOG IN</button>
 				  {{ Form::close() }}
-	              <div class="text-center">
-	                  <a href="#" id="forgotPasswordLink">Forgot your password?</a>
-	              </div>
 	            </div>
 	          </div>
 	        </div>
