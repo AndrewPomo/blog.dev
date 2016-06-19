@@ -7,6 +7,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,800,700,600,400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/main.css" crossorigin="anonymous">
 	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php $user = Auth::user() ?>
 	@yield('top-links')
 </head>

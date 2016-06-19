@@ -134,6 +134,22 @@ body {
 	margin-bottom: 50px
 }
 
+.jumbotron p {
+		font-size: 16px;
+}
+
+#reallybig {
+	font-size: 35px;
+}
+
+#intro {
+	margin-top:10px;
+}
+
+.homebutton {
+		font-size:20px;
+	}
+
 @media screen and (min-width: 768px) {
 	#post-holder {
 		margin-top: -140px;
@@ -158,19 +174,13 @@ body {
 	#intro {
 		margin-top:70px;
 	}
+
+	.homebutton {
+		font-size:30px;
+	}
 }
 
-.jumbotron p {
-		font-size: 16px;
-}
 
-#reallybig {
-	font-size: 35px;
-}
-
-#intro {
-	margin-top:10px;
-}
 
 
 #user-title {
@@ -246,7 +256,6 @@ body {
 	display:none;
 }
 
-
 #languages {
 	color: rgb(19, 56, 132);
 	font-weight: 600;
@@ -278,6 +287,7 @@ a>.fa-4 {
 .homebutton {
 	color: rgb(110,110,110);
 	font-weight: 500;
+	font-size:25px;
 	background-color: transparent;
 	border: 1px solid rgb(110,110,110);
 	border-radius: 30px;
