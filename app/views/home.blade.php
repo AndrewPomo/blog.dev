@@ -19,7 +19,6 @@
 			    <p>Full Stack Developer | Marketer | Project Manager</p>
 			    <p id='reallybig'>I love <span id="languages">PHP</span></p>
 			</div>
-			<hr class="">
 			<div id="intro" class="col-md-5 col-xs-12">
 				<p>I'm Andrew, a full-stack developer with five years of startup marketing and project management experience. I want to build things that matter.</p>
 				<h2 id="home-buttons"><a href="/resume"><button id="homeresume"class="homebutton">Resume</button></a><a href="/portfolio"><button class="homebutton">Portfolio</button></a></h2>

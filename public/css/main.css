@@ -172,6 +172,7 @@ body {
 	margin-top:10px;
 }
 
+
 #user-title {
 	z-index: -10;
 }
@@ -245,6 +246,7 @@ body {
 	display:none;
 }
 
+
 #languages {
 	color: rgb(19, 56, 132);
 	font-weight: 600;
@@ -263,10 +265,6 @@ body {
 	margin-right: 25px;
 	margin-left: 25px;
 }
-
-/*.fa.fa-envelope-square {
-	margin-left: 0px;
-}*/
 
 .fa:hover{
 	color: rgb(19, 56, 132);
@@ -300,8 +298,6 @@ a>.fa-4 {
 #bigger-margin {
 	margin-bottom: 45px
 }
-
-
 
 #linksintro {
 	color: rgb(70, 70, 70);
