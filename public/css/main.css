@@ -9,6 +9,7 @@ body {
 	background-color: transparent;
 	color: rgb(110, 110, 110);
 	border-radius: 0px;
+	margin-bottom: 10px
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -135,11 +136,12 @@ body {
 }
 
 .jumbotron p {
-		font-size: 16px;
+	font-size: 16px;
 }
 
 #reallybig {
 	font-size: 35px;
+	margin-bottom: 7px;
 }
 
 #intro {
@@ -151,6 +153,11 @@ body {
 	}
 
 @media screen and (min-width: 768px) {
+	.navbar {	
+		margin-bottom: 10px
+	}
+
+
 	#post-holder {
 		margin-top: -140px;
 	}
