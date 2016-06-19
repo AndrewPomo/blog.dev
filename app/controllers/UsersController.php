@@ -100,7 +100,6 @@ class UsersController extends \BaseController {
 	{
 		$user = User::find($id);
 		$posts = $user->posts;
-
 		return View::make("users.show")->with('user', $user)->with('posts', $posts);
 	}
 

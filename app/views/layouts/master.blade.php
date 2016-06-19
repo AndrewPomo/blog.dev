@@ -7,7 +7,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,800,700,600,400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/main.css" crossorigin="anonymous">
 	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-	{{$user = Auth::user()}}
+	<?php $user = Auth::user() ?>
 	@yield('top-links')
 </head>
 <body>
@@ -60,7 +60,7 @@
 	        <!-- These only show if the user is logged OUT -->
 
 	        <button type="button" class="btn btn-default" id="login-modal-button" data-toggle="modal" data-target=".login-modal">Login</button>
-	        <button type="button" class="btn btn-default" id="signup-modal-button" data-toggle="modal" data-target=".signup-modal">Sign Up</button>
+	        <!-- <button type="button" class="btn btn-default" id="signup-modal-button" data-toggle="modal" data-target=".signup-modal">Sign Up</button> -->
 	        @endif
 	      </div>
 

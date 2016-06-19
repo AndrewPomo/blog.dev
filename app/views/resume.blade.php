@@ -15,7 +15,7 @@
         <div id='blog-jumbo' class="jumbotron">
             <h1 id='roboto-slab'>tl;dr</h1>
             <p>I'm a formally-trained developer with 4.5 years of marketing experience. I'm new to coding, but I've excelled thus far. Turn me into your ideal programmer.</p> 
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Download My Boring .PDF Resume</a></p>
+            <p><a class="btn btn-primary btn-lg" href="/files/Andrew_Powell_Morse.pdf" role="button">Download My .PDF Resume</a></p>
             <p>Or keep scrolling for the version I prefer.</p>
         </div>
     </div>
@@ -23,18 +23,7 @@
 <div class="container">
     <div id="resume-content-holder" class="container col-xs-10 col-xs-offset-1">
         <h2 id="resume-content-head" class='roboto-slab roboto-bold'>My Story</h2>
-        <h3 class='roboto-slab'>Education:</h3>
-        <strong>University of North Texas - Marketing Major</strong>
-            <ul>
-                <li>Two time recipient of President's list honors. (4.0 GPA for semester)</li>
-            </ul>
-        <strong>Codeup Full Stack Program</strong>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>JavaScript & jQuery</li>
-                <li>MySQL</li>
-                <li>PHP & Laravel</li>
-            </ul>
+        
         <div id="work-experience">
             <h3 class='roboto-slab'>Work Experience:</h3>
             <div class="job">
@@ -87,6 +76,18 @@
                 </div>
             </div>
         </div>
+        <h3 class='roboto-slab'>Education:</h3>
+        <strong>University of North Texas - Marketing Major</strong>
+            <ul>
+                <li>Two time recipient of President's list honors. (4.0 GPA for semester)</li>
+            </ul>
+        <strong>Codeup Full Stack Program</strong>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript & jQuery</li>
+                <li>MySQL</li>
+                <li>PHP & Laravel</li>
+            </ul>
     </div>
     <hr>
 </div>

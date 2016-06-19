@@ -3,6 +3,21 @@
 			
     $(document).ready(function() {
 
+    	// Home page language switcher
+    	var languages = ["MySQL", "JavaScript", "Linux", "CSS", "HTML5", "Git", "PHP"];
+    	var i = 0;
+    	setInterval (function() {
+			if (i == languages.length){
+				i = 0;
+			}
+			var language = languages[i];
+	    	$("#reallybig").fadeOut(1000, function(){
+	    		i++;
+	    		$("#reallybig").html(language).fadeIn(1000);
+	    	});    		
+	    }, 3500);
+		// End home page language switcher
+
     	// Quote Generator
 	    var famousQuotes = [
 			{

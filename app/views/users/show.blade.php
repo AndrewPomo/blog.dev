@@ -36,7 +36,7 @@
 
 		<hr class="ad-divider">
         @if (!$posts->isEmpty())
-        {{$postNum = 1}}
+        <?php $postNum = 1 ?>
         <h2 class="row text-center recent-ads-header">Your Latest Posts</h2>
         <div class="container">
 			<div id="post-holder-normal" class="container col-md-10 col-xs-12 col-md-offset-1">
@@ -74,7 +74,7 @@
 					</div>
 				</div>
 				<!-- END DELETE MODAL -->
-        	{{$postNum++}}
+        	<?php $postNum++ ?>
         	@endforeach
         	</div>
         </div>
