@@ -66,9 +66,10 @@ body {
 }
 
 #blog-jumbo {
-	color: white;
+	color: rgb(110, 110, 110);
 	font-weight: 800;
 	margin-top: 15px;
+	margin-bottom: 0px;
 	background-color: transparent;
 }
 
@@ -77,6 +78,23 @@ body {
 	font-weight: 800;
 	padding:0px;
 	background-color: transparent;
+}
+
+#resume-jumbo {
+	color: rgb(110, 110, 110);
+	font-weight: 800;
+	padding:0px;
+	background-color: transparent;
+}
+
+#skills-jumbo {
+	color: rgb(110, 110, 110);
+	padding:0px;
+	background-color: transparent;
+}
+
+#skills-jumbo li {
+	font-size: 30px;
 }
 
 #post-holder-normal{
@@ -107,6 +125,17 @@ body {
 
 .roboto-slab {
 	font-family: Roboto Slab;
+}
+
+hr {
+	width:100%;
+}
+.res-sec {
+	font-size: 45px
+}
+
+.reslist {
+	font-size: 16px;
 }
 
 .roboto-bold {
@@ -148,12 +177,29 @@ body {
 	margin-top:10px;
 }
 
+.resumebutton {
+	margin-top:20px;
+}
+
 #home-buttons {
 	margin-top: 10px;
 	padding: 0px;
 }
 
-.homebutton {
+.skills {
+	background-color: white;
+}
+
+.skillhead {
+	font-size:30px;
+	color: rgb(70, 70, 70);
+}
+
+#res-skills p {
+	font-size: 20px;
+}
+
+.homebutton, .resumebutton {
 	color: white;
 	font-weight: 500;
 	font-size: 22px;
@@ -163,7 +209,7 @@ body {
 	padding: 10px 25px 10px 25px;
 }
 
-.homebutton:hover {
+.homebutton:hover, .resumebutton:hover {
 	background-color: white;
 	color: rgb(19, 56, 132);
 	border: 1px solid rgb(19, 56, 132);
@@ -199,7 +245,7 @@ body {
 		margin-top:70px;
 	}
 
-	.homebutton {
+	.homebutton, .btn-primary {
 		font-size:30px;
 	}
 }
