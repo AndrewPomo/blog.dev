@@ -29,7 +29,7 @@
                             <p class="hidden-xs hidden-sm featured">
                             This simple JavaScript game is an admittedly weird version of the old school hand-held game 'Simon'. I enjoyed this whole project, but especially writing the sassy dialogue between Bird and Bambi.</p>
                             <p class="hidden-xs hidden-sm featured"><a class="btn btn-primary" href=
-                            "{{{action('HomeController@simon')}}}" role="button" target="blank">Visit Facebook.com</a></p>
+                            "{{{action('HomeController@simon')}}}" role="button" target="blank">Play Simon</a></p>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                             <p class="hidden-xs hidden-sm featured">
                             Another simple JavaScript wack-a-mole game featuring everyone's least-favorite Canadian pop star! Neat features include the clock, which adds time to your timer, and the CSS 'holes' that I made. Beat away!</p>
                             <p class="hidden-xs hidden-sm featured"><a class="btn btn-primary" href=
-                            "{{{action('HomeController@bieberBeater')}}}" role="button" target="blank">Visit Bieber Beater.com</a></p>
+                            "{{{action('HomeController@bieberBeater')}}}" role="button" target="blank">Play Bieber Beater</a></p>
                         </div>
                     </div>
                 </div>
@@ -105,20 +105,5 @@
             </div>
         </div>
    <!--  </div> -->
-    <div class="container-fluid">
-        <div class="container">
-            <h1 id="foot_head">What Others Are Saying</h1>
-        </div>
-        <div class="jumbotron">
-            <img id="ben" alt="ben" class="thumbnail-image" src="/img/ben.jpg">
-            <p>"When I see Andrew write code, I'm often so overcome with joy that I simply fall to my knees and weep. He has completely changed the way I think about web development. You can't afford <em>not</em> to hire him."</p>
-            <p><em>-Ben Batschelet</em></p>
-        </div>
-        <div class="jumbotron">
-            <img id="isaac" alt="isaac" class="thumbnail-image" src="/img/isaac.jpg">
-            <p class="quote">"Andrew is without a doubt the most talented developer I have encountered over the course of the past ten years. I taught him how to write his very first lines of code - now I wish he would teach me."</p>
-            <p><em>-Isaac Castillo</em></p>
-        </div>
-    </div>
     
 @stop
