@@ -14,7 +14,7 @@
     <div id='resume-jumbo' class="jumbotron">
         <h1 id='roboto-slab'>tl;dr</h1>
         <p>After five years of startup marketing and project management, I've added full-stack web development to my tool kit. My love for product development and project management helps me write code efficiently and with purpose. I'm addicted to the pace and culture of startups, and can't wait to experience them as a programmer.</p> 
-        <p>You'll find two version of my resume below. For the short n' sweet PDF, just click the button below. For the extended director's cut with full commentary...well...keep scrolling.</p> 
+        <p>You'll find two versions of my resume below. For the short n' sweet PDF, just click the button below. For the extended director's cut with full commentary...well...keep scrolling.</p> 
         <p><a class="btn resumebutton btn-lg" href="/files/Andrew_Powell_Morse.pdf" role="button">Download .PDF Resume</a></p>
         
     </div>
