@@ -50,20 +50,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-3">
+                <div class="col-sm-6">
                     <div class="thumbnail">
                         <img alt="..." class="thumbnail-image" src=
                         "/img/quickweather.png">
                         <div class="caption">
-                            <h3>QuickWeather <a class="btn btn-primary port_butt hidden-md hidden-lg" href=
+                            <h2 class="hidden-xs hidden-sm">QuickWeather</h2>
+                            <h3 class="hidden-md hidden-lg">QuickWeather <a class="btn btn-primary port_butt hidden-md hidden-lg" href=
                             "{{{action('HomeController@quickWeather')}}}" role="button" target="blank">Try QuickWeather</a></h3>
-                            <p>Drop the pin, see the weather.</p>
-                            <p class="hidden-xs hidden-sm featured">Used JavaScript, the Google Maps API, and the OpenWeatherMap API to build this interactive weather forecasting map. My touch was changing the background to match the current weather at the pin!<a class="btn btn-primary" href=
+                            <p class="hidden-md hidden-lg">Drop the pin, see the weather.</p>
+                            <p class="hidden-xs hidden-sm featured">Used JavaScript, the Google Maps API, and the OpenWeatherMap API to build this interactive weather forecasting map. My touch was changing the background to match the current weather at the pin!</p><p class="hidden-xs hidden-sm featured"><a class="btn btn-primary" href=
                             "{{{action('HomeController@quickWeather')}}}" role="button" target="blank">Try QuickWeather</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
+                <div class="col-sm-6">
                     <div class="thumbnail">
                         <img alt="..." class="thumbnail-image" src=
                         "/img/reddit.png">
@@ -76,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
+                <div class="col-sm-6">
                     <div class="thumbnail">
                         <img alt="..." class="thumbnail-image" src=
                         "/img/seatsmart.png">
@@ -89,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
+                <div class="col-sm-6">
                     <div class="thumbnail">
                         <img alt="..." class="thumbnail-image" src=
                         "/img/apple.png">
