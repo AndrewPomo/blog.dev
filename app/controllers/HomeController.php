@@ -21,6 +21,11 @@ class HomeController extends BaseController {
 		// return View::make('home');
 	}
 
+	public function isitup()
+	{
+		return View::make('isitup');
+	}
+
 	public function resume()
 	{
 	    return View::make('resume');
