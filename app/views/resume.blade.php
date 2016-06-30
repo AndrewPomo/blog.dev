@@ -14,7 +14,7 @@
     <div id='resume-jumbo' class="jumbotron">
         <h1 id='roboto-slab'>tl;dr</h1>
         <p>After five years of startup marketing and project management, I've added full-stack web development to my tool kit. My love for product development and project management helps me write code efficiently and with purpose. I'm addicted to the pace and culture of startups, and can't wait to experience them as a programmer.</p> 
-        <p>You'll find two versions of my resume below. For the short n' sweet PDF, just click the button below. For the extended director's cut with full commentary...well...keep scrolling.</p> 
+        <p>You'll find two versions of my resume below. For the short n' sweet PDF, just click the download button. For the extended director's cut with full commentary...well...keep scrolling.</p> 
         <p><a class="btn resumebutton btn-lg" href="/files/Andrew_Powell_Morse.pdf" role="button">Download .PDF Resume</a></p>
         
     </div>
@@ -89,9 +89,11 @@
                 <div class="hide-show-content">
                     <br>
                     <p><strong>What I Did:</strong></p>
-                    <p>My marketing activities here consisted primarily of writing the copy for the website, app, and promotional literature, but my day-to-day was much more than that. I helped develop every aspect of the business from the ground up. From writing standard operating procedures, to developing sales tactics, to making and wiring cat5 cables, I worked all hours of the day to advise, assist, and elevate every the company in any way I could.</p>
+                    <p>Originally, I was hired as a copy-writer for the Best Tickets website. Almost immediately, my role evolved into much more. I had to rapidly learn the ins-and-outs of blogging and content marketing, Google Analytics, SEO, email marketing, AdWords, Social Media, and conversion optimization.</p>
 
-                    <p><strong>What I Learned:</strong> I have a borderline maniacal willingness to take on any challenge presented to me. Even if I know nothing about the task when I start, I'll end up with a quality result by the time I'm done.</p>
+                    <p>In what was my first experience with many of the items listed above, I increased BestTickets.com annual earnings by more than 5,000% in a single year, and had blog posts republished and covered by hundreds of major newspapers, tv networks, and online publications. For a small team at a small business, we did some very special things at Best Tickets, and I have some very fond memories of working there.</p>
+
+                    <p><strong>What I Learned:</strong> Much of what I gained during my time at Best Tickets was technical marketing skill. We tried many different things and found success with most of them. I gained a lot of confidence here and fell in love with marketing and analytics.</p>
                 </div>
                 <hr>
             </div>
@@ -103,7 +105,7 @@
                     <br>
                     <p><strong>What I Did:</strong></p>
 
-                    <p>My marketing activities here consisted primarily of writing the copy for the website, app, and promotional literature, but my day-to-day was much more than that. I helped develop every aspect of the business from the ground up. From writing standard operating procedures, to developing sales tactics, to making and wiring cat5 cables, I worked all hours of the day to advise, assist, and elevate every the company in any way I could.</p>
+                    <p>My marketing activities here consisted primarily of writing the copy for the website, app, and promotional literature, but my day-to-day was much more than that. I helped develop every aspect of the business from the ground up. From writing standard operating procedures, to developing sales tactics, to making and wiring cat5 cables, I worked all hours of the day to advise, assist, and elevate every part of the company in any way I could.</p>
 
                     <p><strong>What I Learned:</strong></p>
                     <ul>
