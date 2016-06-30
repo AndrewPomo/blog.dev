@@ -18,6 +18,8 @@ Route::get('/isitup', 'HomeController@isitup');
 
 Route::get('/resume', 'HomeController@resume');
 
+Route::get('/calculator', 'HomeController@calculator');
+
 Route::get('/portfolio', 'HomeController@portfolio');
 
 Route::get('/simple-simon', 'HomeController@simon');

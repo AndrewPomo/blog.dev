@@ -31,6 +31,11 @@ class HomeController extends BaseController {
 	    return View::make('resume');
 	}
 
+	public function calculator()
+	{
+	    return View::make('calculator');
+	}
+
 	public function portfolio()
 	{
 	    return View::make('portfolio');

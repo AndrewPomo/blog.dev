@@ -59,7 +59,7 @@
                             <h3 class="hidden-md hidden-lg">QuickWeather <a class="btn btn-primary port_butt hidden-md hidden-lg" href=
                             "{{{action('HomeController@quickWeather')}}}" role="button" target="blank">Try QuickWeather</a></h3>
                             <p class="hidden-md hidden-lg">Drop the pin, see the weather.</p>
-                            <p class="hidden-xs hidden-sm featured">Used JavaScript, the Google Maps API, and the OpenWeatherMap API to build this interactive weather forecasting map. My touch was changing the background to match the current weather at the pin!</p><p class="hidden-xs hidden-sm featured"><a class="btn btn-primary" href=
+                            <p class="hidden-xs hidden-sm featured">I used JavaScript, the Google Maps API, and the OpenWeatherMap API to build this interactive weather forecasting map. The background matches the pinned location's current weather!</p><p class="hidden-xs hidden-sm featured"><a class="btn btn-primary" href=
                             "{{{action('HomeController@quickWeather')}}}" role="button" target="blank">Try QuickWeather</a></p>
                         </div>
                     </div>
