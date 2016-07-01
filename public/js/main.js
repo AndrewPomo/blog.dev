@@ -15,7 +15,7 @@
 	    		i++;
 	    		$("#languages").html(language).fadeIn(1000);
 	    	});    		
-	    }, 3500);
+	    }, 2500);
 		// End home page language switcher
 
     	// Quote Generator

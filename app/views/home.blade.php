@@ -31,7 +31,7 @@
         </div>
         <hr id="bigger-margin">
         <div id="links" class="text-center">
-        	<h2 id="linksintro">Questions?</h2>
+        	<h2 id="linksintro">Connect With Me:</h2>
         	<a class="col-xs-6 col-md-3" href={{{'mailto:andrewpomo815@gmail.com'}}}><i class="fa fa-envelope-square fa-4" aria-hidden="true"></i></a>
         	<a class="col-xs-6 col-md-3" href="https://www.linkedin.com/in/andrewpomo"><i class="fa fa-linkedin-square fa-4" aria-hidden="true"></i></a>
         	<a class="col-xs-6 col-md-3" href="https://github.com/AndrewPomo"><i class="fa fa-github fa-4" aria-hidden="true"></i></a>
