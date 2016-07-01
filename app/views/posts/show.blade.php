@@ -16,6 +16,8 @@
 	</style>
 @stop
 
+@include('partials.navbar')
+
 @section('content')
 <div id='post-hero' class="container-fluid">
 	<div class="container">

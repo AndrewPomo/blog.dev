@@ -53,7 +53,9 @@ body {
 	height:350px;
 	background-image: url('/img/better-wood.jpg');
 }
-
+#login-modal-button {
+	margin-top: 10px
+}
 #resume-hero {
 	margin-top: -20px;
 	height:450px;
@@ -215,6 +217,21 @@ hr {
 	border: 1px solid rgb(19, 56, 132);
 }
 
+.bluebutton {
+	color: white;
+	font-weight: 500;
+	background-color: rgb(19, 56, 132);
+	border: 1px solid rgb(19, 56, 132);
+	border-radius: 30px;
+	padding: 10px 25px 10px 25px;
+}
+
+.bluebutton:hover {
+	background-color: white;
+	color: rgb(19, 56, 132);
+	border: 1px solid rgb(19, 56, 132);
+}
+
 @media screen and (min-width: 768px) {
 	.navbar {	
 		margin-bottom: 10px
@@ -248,6 +265,7 @@ hr {
 	.homebutton, .btn-primary {
 		font-size:30px;
 	}
+
 }
 
 

@@ -9,6 +9,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
 @stop
 
+@include('partials.navbar')
+
 @section('content')
 <div id='home-hero' class="container">
     <div id='home-jumbo' class="jumbotron">

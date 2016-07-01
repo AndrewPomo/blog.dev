@@ -7,6 +7,9 @@
 @section('top-links')
 
 <link href="/css/main.css" rel="stylesheet">
+@stop
+
+@include('partials.navbar')
 
 @section('content')
 

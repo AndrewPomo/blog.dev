@@ -1,7 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Instant Weather Forecast by QuickWeather</title>
+@extends('layouts.master')
+
+@section('title-tag')
+    My Resume
+@stop
+
+@section('top-links')
+   <title>Instant Weather Forecast by QuickWeather</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<style type="text/css">
@@ -104,8 +108,13 @@
         }
 
 	</style>
-</head>
-<body>
+@stop
+
+@include('partials.navbar')
+
+@section('content')
+	
+
     <div class="container-fluid weatherStuffHolder">
     	<div class="jumbotron col-xs-10 col-xs-offset-1">
 			<p id="jumbograph">Welcome to Quickweather - the fastest and easiest way to get a simple forecast for any location on earth. Get your forecast by dragging the pin below to any location!</p>
