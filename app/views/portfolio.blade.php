@@ -46,7 +46,7 @@
                             "http://radlister.andrewpomo.com" role="button" target="blank">Try Radlister</a></h3>
                             <p class="hidden-md hidden-lg">The Gnarliest Craigslist Clone</p>
                             <p class="hidden-xs hidden-sm featured">
-                            Craigslist clone built at Codeup on a team of three. This project took about 6 days. My key responsibilities included ad creation, editing and deletion, login and logout, building views for the user profile, ad index and single ad, , and and the general color scheme, design and layout of the site.</p>
+                            Craigslist clone built at Codeup on a team of three. This project took about 6 days. My key responsibilities included ad creation, editing and deletion, login and logout, building views for the user profile, ad index and single ad, and the general color scheme, design and layout of the site.</p>
                             <p>Tech: HTML, CSS, Bootstrap, jQuery, PHP, MySQL</p>
                             <p class="hidden-xs hidden-sm featured"><a href=
                             "http://radlister.andrewpomo.com"> <button class="homebutton">Try RadLister</button></a></p>
